@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo List</title>
+	<link rel="stylesheet" type="text/css" href="./styles/style.css">
+</head>
+<body>
+	<div id="header">
+		<h1>ToDo List</h1>
+		<div class="search-task">
+			<input type="text" id="searchInput" placeholder="Search tasks...">
+			<button id="searchButton">Search</button>
+		  </div>
+		<div id="loading">
+			<div class="spinner"></div>
+		</div>
+	</div>
+	<input type="text" id="taskInput" placeholder="Add new task...">
+	<button id="addButton">Add</button>
+	<button id="toggleButton">Show List</button>
+	<ul id="tasksList" style="display: none;">
+	</ul>
+		<!-- Modal -->
+	  <div id="modal" class="modal">
+		<div class="modal-content">
+		  <h2>Edit Task</h2>
+		  <form id="editForm">
+			<label for="editTaskInput">Task Text:</label>
+			<input type="text" id="editTaskInput" name="editTaskInput" required />
+			<div class="modal-buttons">
+			  <button type="submit">Save</button>
+			  <button type="button" id="cancelEditButton">Cancel</button>
+			</div>
+		  </form>
+		</div>
+	  </div>	  
+	<script src="./js/helpers.js"></script>
+	<script src="./js/tasks.js"></script>
+</body>
+</html>
